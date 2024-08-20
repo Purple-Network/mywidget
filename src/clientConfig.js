@@ -1,6 +1,6 @@
 export const clientConfig = {
   clientId: "e7de8a75-62bb-43eb-9063-38509f8c21af",
-  redirectUri: "http://localhost:5173",
+  redirectUri: "https://purple-network.github.io/mywidget/",
   // opts: {
   //   org: "",
   //   provider: "",
