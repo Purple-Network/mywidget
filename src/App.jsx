@@ -62,7 +62,7 @@ function App() {
       console.log("createEmailConversation is sucessful:");
       setTimeout(() => {
         setConversation({});
-      }, 5);
+      }, 5000);
     } catch (err) {
       console.error("Error during createEmailConversation operation:", err);
       setErrorData({
