@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     outDir: "widget",
+    chunkSizeWarningLimit: 3000,
   },
   base: "/mywidget/",
 });
