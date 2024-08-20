@@ -6,6 +6,5 @@ export const clientConfig = {
   //   provider: "",
   //   target: "",
   // },
-
   flowId: "53712bc0-21de-42d6-b416-a64d1ed3c2c5",
 };
