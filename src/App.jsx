@@ -8,8 +8,6 @@ import {
 } from "./utils/genesysCloudUtils";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   const [authData, setAuthData] = useState({});
   const [userData, setUserData] = useState({});
   const [errorData, setErrorData] = useState({});
@@ -19,10 +17,10 @@ function App() {
       try {
         const authData = await authenticate(clientConfig);
         setAuthData(authData);
-        console.log("AUTH", authData);
+        //console.log("AUTH", authData);
         const userData = await getUserMe();
         setUserData(userData);
-        console.log("userdata", userData);
+        //console.log("userdata", userData);
         // Handle userData if needed
       } catch (err) {
         console.error(err);
@@ -59,7 +57,7 @@ function App() {
       };
       const response = await createEmailConversation(body);
       setConversation(response);
-      console.log("createEmailConversation is sucessful:");
+      console.log("createEmailConversation response ", response);
       setTimeout(() => {
         setConversation({});
       }, 5000);
