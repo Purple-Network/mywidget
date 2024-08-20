@@ -33,9 +33,13 @@ function App() {
     getPlatformClientData();
   }, []);
 
-  const clearErrorData = async () => {
+  const clearErrorData = () => {
     setErrorData({});
     window.location.reload(); // Refresh the entire page
+  };
+
+  const handleDismissError = () => {
+    clearErrorData();
   };
 
   const handleStartClick = async () => {
@@ -79,7 +83,7 @@ function App() {
           <p className="mt-2 text-sm">Details: {errorData.details}</p>
           <button
             className="mt-2 px-4 py-2 bg-gray-300 text-gray-800 font-semibold rounded-lg hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500"
-            onClick={async () => await clearErrorData()}
+            onClick={handleDismissError}
           >
             Dismiss
           </button>
