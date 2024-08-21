@@ -1,6 +1,7 @@
 import platformClient from "purecloud-platform-client-v2";
 
 const client = platformClient.ApiClient.instance;
+client.setPersistSettings(true);
 client.setEnvironment(platformClient.PureCloudRegionHosts.ap_southeast_2);
 const usersApi = new platformClient.UsersApi();
 const conversationApi = new platformClient.ConversationsApi();
